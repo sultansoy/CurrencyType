@@ -28,9 +28,8 @@ public:
     }
 
     CurrencyType(double _val) {
-        INT intUnit = (INT)_val;
-        INT fractUnit = ((INT)_val - intUnit);
-        val = intUnit * 100 + fractUnit;
+        _val *= 100;
+        val = (INT)_val;
     }
 
     bool operator>(const CurrencyType& other) {
